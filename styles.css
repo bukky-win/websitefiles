@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Proggy Clean';
+    src: url('../fonts/ProggyClean.ttf') format('truetype'); /* Adjust the path if necessary */
+}
+
+/* General Styles */
+body {
+    font-family: 'Proggy Clean', monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background for contrast */
+    color: #f4f4f4; /* Light text color for readability */
+}
+
+header {
+    background: #000000; /* Solid black header */
+    color: #ff0000; /* Bright red text color */
+    padding: 15px 30px; /* Increased padding for a more spacious feel */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+header .logo {
+    font-size: 26px; /* Slightly larger logo for prominence */
+}
+
+nav a {
+    color: #ff0000; /* Bright red links */
+    text-decoration: none;
+    margin: 0 20px; /* Increased spacing for a less crowded look */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline on hover for clarity */
+    color: #ffffff; /* White color on hover for contrast */
+}
+
+main {
+    padding: 30px; /* More padding for a spacious layout */
+    max-width: 1200px; /* Restrict main content width */
+    margin: auto; /* Centering main content */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Keep form width controlled */
+    margin: auto;
+}
+
+form input {
+    margin-bottom: 15px; /* Increased margin for better spacing */
+    padding: 10px;
+    border: 1px solid #ff0000; /* Red border for inputs */
+    border-radius: 5px; /* Rounded corners for a softer look */
+    background-color: #2a2a2a; /* Darker background for inputs */
+    color: #f4f4f4; /* Light text color for readability */
+}
+
+/* Universal Button Styles */
+button {
+    padding: 12px 20px; /* Standard padding for all buttons */
+    background-color: #ff4d4d; /* Base lighter red button color */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners for all buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Smooth transitions */
+    font-size: 16px; /* Consistent font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+button:hover {
+    background-color: #ff6666; /* Slightly darker red on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover for emphasis */
+}
+
+button:active {
+    transform: translateY(1px); /* Pressed effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow when pressed */
+}
+
+/* Styles for Logs Page */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+th {
+    background-color: #000;
+    color: #ff0000; /* Red header for actions */
+}
+
+td {
+    background-color: #2a2a2a;
+    color: #f4f4f4;
+}
+
+td:hover {
+    background-color: #3c3c3c; /* Highlight row on hover */
+}
+
+
+/* Remove dropdown arrows */
+.modal select {
+    -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"%3E%3Cpath fill="%23000" d="M5 8l5 5 5-5H5z"/%3E%3C/svg%3E'); /* Add a custom down arrow icon (optional) */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: right 10px center; /* Position the custom arrow */
+    background-size: 10px; /* Size of the custom arrow */
+}
+
+/* Add padding to account for the custom arrow */
+.modal select {
+    padding-right: 30px; /* Add extra padding on the right */
+}
+
+/* Modal Styles */
+.modal {
+    display: flex;
+    flex-direction: column;
+    background-color: #2a2a2a; /* Dark background for modal */
+    color: #f4f4f4; /* Light text color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    position: fixed; /* Position modal on the screen */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Translate to center */
+    z-index: 1000; /* Higher z-index to ensure it sits above other elements */
+}
+
+/* Label Styles */
+.modal label {
+    margin: 10px 0 5px; /* Spacing for labels */
+}
+
+/* Input and Select Styles */
+.modal input,
+.modal select {
+    padding: 10px;
+    margin-bottom: 15px; /* Space below each input/select */
+    border: 1px solid #ff0000; /* Red border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #1a1a1a; /* Dark background for inputs */
+    color: #f4f4f4; /* Light text color for readability */
+    font-size: 16px; /* Consistent font size */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+.modal input:focus,
+.modal select:focus {
+    border-color: #ffffff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
+.modal button {
+    padding: 12px 20px; /* Standard padding for buttons */
+    background-color: #ff4d4d; /* Base lighter red button color */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    font-size: 16px; /* Consistent font size */
+    margin-top: 10px; /* Space above buttons */
+}
+
+/* Button Hover Effect */
+.modal button:hover {
+    background-color: #ff6666; /* Slightly darker red on hover */
+}
+
+/* Remove dropdown arrows */
+.modal select {
+    -webkit-appearance: none; /* Remove default arrow in Chrome and Safari */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in other browsers */
+    background-image: url('data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"%3E%3Cpath fill="%23000" d="M5 8l5 5 5-5H5z"/%3E%3C/svg%3E'); /* Add a custom down arrow icon (optional) */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-position: right 10px center; /* Position the custom arrow */
+    background-size: 10px; /* Size of the custom arrow */
+    padding-right: 30px; /* Add extra padding on the right */
+}
+
+
+.button-form {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+}
+
+.action-button {
+    padding: 12px 20px; /* Consistent padding for all buttons */
+    background-color: #ff4d4d; /* Base lighter red button color */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners for all buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Smooth transitions */
+    font-size: 16px; /* Consistent font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.action-button:hover {
+    background-color: #ff6666; /* Slightly darker red on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover for emphasis */
+}
+
+/* Back button styles */
+.back-button {
+    padding: 12px 20px; /* Padding for back button */
+    background-color: #ff4d4d; /* Base lighter red button color */
+    color: #ffffff; /* White text for contrast */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Smooth transitions */
+    font-size: 16px; /* Consistent font size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.back-button:hover {
+    background-color: #ff6666; /* Slightly darker red on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover for emphasis */
+}
+
+
+/* Info Box Styles */
+.info-box {
+    background-color: #2a2a2a; /* Darker background for boxes */
+    border: 1px solid #444; /* Border for the boxes */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    margin: 20px 0; /* Margin to separate boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+}
+
+.info-box h2 {
+    color: #ff0000; /* Red title color */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.info-box ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove padding */
+}
+
+.info-box li {
+    margin: 5px 0; /* Space between list items */
+}
