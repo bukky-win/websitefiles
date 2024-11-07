@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Proggy Clean';
-    src: url('../fonts/ProggyClean.ttf') format('truetype'); /* Adjust the path if necessary */
+    src: url('https://github.com/bukky-win/websitefiles/raw/refs/heads/main/ProggyClean.ttf') format('truetype'); /* Using the direct URL for the font */
 }
 
 /* General Styles */
